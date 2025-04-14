@@ -1,0 +1,142 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base styles
+.page {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-dark;
+  background-color: $color-light;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include media-md {
+    padding: 0 $spacing-lg;
+  }
+}
+
+// Text utilities
+.text {
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--truncate {
+    @include text-truncate;
+  }
+
+  &--multiline-truncate {
+    @include text-multiline-truncate(2);
+  }
+}
+
+// Spacing utilities
+.mt {
+  &--xs { margin-top: $spacing-xs; }
+  &--sm { margin-top: $spacing-sm; }
+  &--md { margin-top: $spacing-md; }
+  &--lg { margin-top: $spacing-lg; }
+  &--xl { margin-top: $spacing-xl; }
+}
+
+.mb {
+  &--xs { margin-bottom: $spacing-xs; }
+  &--sm { margin-bottom: $spacing-sm; }
+  &--md { margin-bottom: $spacing-md; }
+  &--lg { margin-bottom: $spacing-lg; }
+  &--xl { margin-bottom: $spacing-xl; }
+}
+
+// Color utilities
+.text {
+  &--primary { color: $color-primary; }
+  &--secondary { color: $color-secondary; }
+  &--success { color: $color-success; }
+  &--danger { color: $color-danger; }
+  &--warning { color: $color-warning; }
+  &--info { color: $color-info; }
+}
+
+.bg {
+  &--primary { background-color: $color-primary; }
+  &--secondary { background-color: $color-secondary; }
+  &--success { background-color: $color-success; }
+  &--danger { background-color: $color-danger; }
+  &--warning { background-color: $color-warning; }
+  &--info { background-color: $color-info; }
+}
+
+:root {
+  // Colors
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-success: #{$color-success};
+  --color-danger: #{$color-danger};
+  --color-warning: #{$color-warning};
+  --color-info: #{$color-info};
+  --color-light: #{$color-light};
+  --color-dark: #{$color-dark};
+
+  // Typography
+  --font-family-base: #{$font-family-base};
+  --font-size-base: #{$font-size-base};
+  --line-height-base: #{$line-height-base};
+
+  // Spacing
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+
+  // Shadows
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+
+  // Border radius
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-full: #{$border-radius-full};
+
+  // Transitions
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-normal};
+  --transition-slow: #{$transition-slow};
+
+  // Border
+  --color-border: #{$color-secondary}40;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-light);
+} 

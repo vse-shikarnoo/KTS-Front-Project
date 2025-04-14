@@ -1,0 +1,146 @@
+@import '@shared/styles/variables.scss';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md;
+}
+
+.loading,
+.error,
+.notFound {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $color-secondary;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: $color-danger;
+}
+
+.header {
+  margin-bottom: $spacing-lg;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $color-dark;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.meta {
+  color: $color-secondary;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+
+  &::before {
+    content: '🕒';
+    font-size: 1.2em;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $spacing-lg;
+  align-items: start;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, $color-primary, darken($color-primary, 10%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description {
+  background: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+
+  h2 {
+    font-size: 1.5rem;
+    color: $color-dark;
+    margin-bottom: $spacing-md;
+  }
+
+  :global(p) {
+    margin-bottom: $spacing-md;
+    line-height: 1.6;
+    color: $color-secondary;
+  }
+
+  :global(a) {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.backButton {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.details {
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--color-background);
+  border-radius: 8px;
+
+  p {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.mainImage {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-md);
+} 
