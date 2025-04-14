@@ -1,3 +1,5 @@
+import { PaginatedResponse } from '@entities/common/types/pagination'
+
 export interface Recipe {
   id: number
   documentId: string
@@ -29,17 +31,7 @@ export interface Recipe {
   }>
 }
 
-export interface RecipeListResponse {
-  data: Recipe[]
-  meta: {
-    pagination: {
-      page: number
-      pageSize: number
-      pageCount: number
-      total: number
-    }
-  }
-}
+export type RecipeListResponse = PaginatedResponse<Recipe>
 
 export interface RecipeResponse {
   data: Recipe

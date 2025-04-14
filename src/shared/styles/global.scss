@@ -1,0 +1,62 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+// Сброс стилей
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Базовые стили
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $dark-color;
+  background-color: $light-color;
+}
+
+// Общие классы
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include media-md {
+    padding: 0 $spacing-lg;
+  }
+}
+
+// Утилиты для текста
+.text {
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+}
+
+// Утилиты для отступов
+.mt {
+  &--xs { margin-top: $spacing-xs; }
+  &--sm { margin-top: $spacing-sm; }
+  &--md { margin-top: $spacing-md; }
+  &--lg { margin-top: $spacing-lg; }
+  &--xl { margin-top: $spacing-xl; }
+}
+
+.mb {
+  &--xs { margin-bottom: $spacing-xs; }
+  &--sm { margin-bottom: $spacing-sm; }
+  &--md { margin-bottom: $spacing-md; }
+  &--lg { margin-bottom: $spacing-lg; }
+  &--xl { margin-bottom: $spacing-xl; }
+} 

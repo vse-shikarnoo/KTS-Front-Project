@@ -1,8 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 import { RecipeListResponse, RecipeResponse } from './types'
-
-const BASE_URL = 'https://front-school-strapi.ktsdev.ru/api'
+import { API_CONFIG } from '@shared/config/api/config'
 
 export const recipesApi = {
   getList: async () => {
@@ -13,7 +12,7 @@ export const recipesApi = {
     })
     
     const response = await axios.get<RecipeListResponse>(
-      `${BASE_URL}/recipes?${query}`
+      `${API_CONFIG.BASE_URL}/recipes?${query}`
     )
     
     return response.data
@@ -25,7 +24,7 @@ export const recipesApi = {
     })
     
     const { data } = await axios.get<RecipeResponse>(
-      `${BASE_URL}/recipes/${documentId}?${query}`
+      `${API_CONFIG.BASE_URL}/recipes/${documentId}?${query}`
     )
     
     return data
