@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { recipesApi } from '@entities/recipe/api'
-import { Recipe } from '@entities/recipe/types'
+import { Recipe } from '@entities/recipe/store/recipe-store'
 
 // Кеш для хранения данных между рендерами
 let recipesCache: Recipe[] | null = null

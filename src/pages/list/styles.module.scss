@@ -1,4 +1,4 @@
-@import '@app/styles/variables.scss';
+@import '@shared/styles/variables.scss';
 
 .container {
   padding: var(--spacing-md);
@@ -60,4 +60,17 @@ p {
   margin: 0;
   color: var(--color-secondary);
   font-size: 0.9rem;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+}
+
+.error {
+  color: var(--color-danger);
 } 

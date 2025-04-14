@@ -86,4 +86,57 @@
   &--danger { background-color: $color-danger; }
   &--warning { background-color: $color-warning; }
   &--info { background-color: $color-info; }
+}
+
+:root {
+  // Colors
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-success: #{$color-success};
+  --color-danger: #{$color-danger};
+  --color-warning: #{$color-warning};
+  --color-info: #{$color-info};
+  --color-light: #{$color-light};
+  --color-dark: #{$color-dark};
+
+  // Typography
+  --font-family-base: #{$font-family-base};
+  --font-size-base: #{$font-size-base};
+  --line-height-base: #{$line-height-base};
+
+  // Spacing
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+
+  // Shadows
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+
+  // Border radius
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-full: #{$border-radius-full};
+
+  // Transitions
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-normal};
+  --transition-slow: #{$transition-slow};
+
+  // Border
+  --color-border: #{$color-secondary}40;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-light);
 } 
