@@ -9,7 +9,17 @@
     "lint": "eslint src --ext .ts,.tsx",
     "preview": "vite preview",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,scss}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,scss}\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,css}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@types/classnames": "^2.3.0",
@@ -32,6 +42,8 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "sass": "^1.86.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"

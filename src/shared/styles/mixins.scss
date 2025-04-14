@@ -57,9 +57,33 @@
   overflow: hidden;
 }
 
+// Цвета
+@mixin hover-color($color) {
+  &:hover {
+    color: darken($color, 10%);
+  }
+}
+
+@mixin hover-bg($color) {
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
 // Анимации
 @mixin transition($property: all, $duration: $transition-normal) {
   transition: $property $duration;
+}
+
+// Тень
+@mixin shadow($level: 'md') {
+  @if $level == 'sm' {
+    box-shadow: $shadow-sm;
+  } @else if $level == 'md' {
+    box-shadow: $shadow-md;
+  } @else if $level == 'lg' {
+    box-shadow: $shadow-lg;
+  }
 }
 
 // Скрытие элементов

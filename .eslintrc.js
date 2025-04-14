@@ -25,10 +25,14 @@ module.exports = {
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
   },
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/resolver': {
+      typescript: {},
     },
   },
 } 
