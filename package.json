@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://akiverin.github.io/kts",
+  "homepage": "https://vse-shikarnoo.github.io/KTS-Front-Project/",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
