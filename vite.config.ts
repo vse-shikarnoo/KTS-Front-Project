@@ -17,7 +17,7 @@ const parseTsConfigPaths = (paths: Record<string, string[]>): Record<string, str
 
 export default defineConfig({
   plugins: [react()],
-  base: '/kts/',
+  base: '/KTS-Front-Project/',
   build: {
     outDir: 'build',
   },
