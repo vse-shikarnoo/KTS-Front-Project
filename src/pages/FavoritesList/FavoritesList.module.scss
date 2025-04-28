@@ -1,0 +1,60 @@
+.foods-favorites {
+  padding-top: 36px;
+  padding-bottom: 80px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $space-m;
+    padding: 0;
+    margin: 48px 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+    text-align: center;
+  }
+
+  &__item {
+    max-width: 360px;
+  }
+
+  &__wrapper {
+    @include wrapper-f-column;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-l;
+    width: 100%;
+    margin-top: 48px;
+    align-items: end;
+  }
+
+  &__dropdown {
+    max-width: 300px;
+  }
+
+  &__time {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__filters {
+    display: flex;
+    gap: $space-m;
+    margin-bottom: $space-xl;
+    align-items: center;
+  }
+
+  &__vegetarian {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

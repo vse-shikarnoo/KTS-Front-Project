@@ -1,0 +1,76 @@
+.food {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 37px 0 80px;
+  }
+
+  &__pattern {
+    position: absolute;
+    right: -40px;
+    top: -50px;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    @include wrapper;
+    & {
+      padding-top: 50px;
+    }
+  }
+
+  &__back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__image {
+    max-width: 448px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 298px;
+    border-radius: $border-radius;
+  }
+
+  &__details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 100px;
+    row-gap: 50px;
+    max-width: 480px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-xxs;
+  }
+
+  &__desc {
+    background-color: rgba(181, 70, 15, 0.33);
+    padding: 36px;
+    color: $text-primary;
+    border-radius: $border-radius;
+  }
+}

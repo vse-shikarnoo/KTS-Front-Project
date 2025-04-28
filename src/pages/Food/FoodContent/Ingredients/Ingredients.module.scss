@@ -1,0 +1,66 @@
+.ingredients {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  overflow: hidden;
+
+  &__section {
+    position: relative;
+    &:nth-child(1) {
+      flex: 4;
+    }
+    &:nth-child(2) {
+      flex: 3;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 200px;
+    margin-top: 8px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $space-m;
+    max-width: 273px;
+  }
+
+  &__grid {
+    margin-top: $space-xl;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px 29px;
+  }
+
+  &__border {
+    position: absolute;
+    top: 0;
+    right: -50px;
+  }
+
+  &__button {
+    border: none;
+    background: none;
+    color: $brand;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $brand-hover;
+    }
+    &:active {
+      color: $brand-active;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-l) {
+  .ingredients {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
